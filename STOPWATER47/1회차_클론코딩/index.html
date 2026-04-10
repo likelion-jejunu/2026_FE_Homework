@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제주대학교 포털</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="inner">
+                <div class="logo-area">
+                    <img src="logo.png" alt="제주대학교" class="main-logo">
+                    <span class="portal-text">포털</span>
+                </div>
+                <div class="search-area">
+                    <input type="text" placeholder="메뉴검색">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="top-links">
+                    <span>통합정보</span> <span>JNUClass</span> <span>홈페이지</span>
+                    <button class="btn-sm">로그아웃</button>
+                    <button class="btn-sm">마이페이지</button>
+                    <span class="top-icons">⚙️ ❓ 🌐</span>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="inner">
+                <ul>
+                    <li>학사안내</li><li>수업/성적</li><li>학적/졸업</li><li>등록/장학</li>
+                    <li>경력관리</li><li>교내활동</li><li>게시판</li><li>시설물예약</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="column-group">
+            <section class="card profile">
+                <div class="profile-header">
+                    <div class="user-txt"><strong>정지수</strong> <span>컴퓨터공학과</span></div>
+                    <div class="alarm">🔔 <span class="count">5</span></div>
+                </div>
+                <div class="status">학부생(재학생) 접속중 | <button class="cert-btn">2차인증 하기 ></button></div>
+                <div class="quick-menu">
+                    <div class="q-item">🏛️<p>통합정보</p></div>
+                    <div class="q-item">📖<p>중앙도서관</p></div>
+                    <div class="q-item">✉️<p>메일</p></div>
+                    <div class="q-item">🪪<p>증명서발급</p></div>
+                </div>
+                <div class="login-footer">
+                    <p>📟 최근 접속 IP : 134.75.39.37</p>
+                    <p>🕒 최근 접속 시간 : 2026-04-08 15:13:44</p>
+                </div>
+            </section>
+
+            <section class="card services">
+                <div class="card-header"><h3>주요서비스링크</h3></div>
+                <div class="service-grid">
+                    <div class="s-item"><div class="circle">📄</div><p>연구실안전</p></div>
+                    <div class="s-item"><div class="circle">🛠️</div><p>공학인증</p></div>
+                    <div class="s-item"><div class="circle">🔳</div><p>오피스365</p></div>
+                    <div class="s-item"><div class="circle">👥</div><p>총학생회</p></div>
+                    <div class="s-item"><div class="circle">✨</div><p>동아리연합</p></div>
+                    <div class="s-item"><div class="circle">🖱️</div><p>헬프유</p></div>
+                    <div class="s-item"><div class="circle">⚙️</div><p>넷클리닉</p></div>
+                </div>
+            </section>
+        </div>
+
+        <div class="column-group">
+            <section class="card notice">
+                <div class="card-header"><h3>공지사항</h3></div>
+                <div class="tabs"><span class="active">공지</span> <span>수업</span> <span>등록</span> <span>장학</span> <span>JNUClass</span></div>
+                <ul class="list">
+                    <li>• 2026 글로벌 피우다 프로젝트 참가자 모집 <span>04-08</span></li>
+                    <li>• [JejuGLoCal] Learncation Program... <span>04-08</span></li>
+                    <li>• 내외국인학생 생태문화 런케이션 모집 <span>04-08</span></li>
+                    <li>• 2026학년도 1학기 국가근로장학생 모집 <span>04-08</span></li>
+                </ul>
+            </section>
+
+            <section class="card program">
+                <div class="card-header"><h3>비교과프로그램</h3></div>
+                <div class="prog-box">
+                    <div class="prog-item"><span>2026학년도 학습컨설팅</span> <button>신청하기 ></button></div>
+                    <div class="prog-item"><span>2026학년 1학기 국가근로장학...</span> <button>신청하기 ></button></div>
+                </div>
+            </section>
+        </div>
+
+        <div class="column-group">
+            <section class="card course">
+                <div class="card-header"><h3>수강정보</h3></div>
+                <ul class="course-list">
+                    <li>서비스서버구축방법론</li>
+                    <li class="item-badged">인터넷과 지식재산권법 <span class="badge orange">일반선택</span></li>
+                    <li>객체지향프로그래밍</li>
+                    <li class="active-item item-badged">웹프로그래밍 <span class="badge green">원격수업</span></li>
+                    <li class="active-item item-badged">빅데이터프로그래밍 <span class="badge purple">블렌디드</span></li>
+                    <li class="item-badged">과학기술과 우리의 삶 <span class="badge gray">JNU공유대학</span></li>
+                </ul>
+            </section>
+
+            <section class="card schedule">
+                <div class="card-header"><h3>강의시간표 <span class="plus">+</span></h3></div>
+                <div class="sch-date">< 2026-04-06(월)~2026-04-11(토) ></div>
+                <table class="sch-table">
+                    <thead>
+                        <tr><th></th><th>월(6)</th><th>화(7)</th><th>수(8)</th><th>목(9)</th><th>금(10)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>2</td><td></td><td></td><td class="bg-blue">서비스서버<br>구축</td><td class="bg-red">빅데이터<br>프로</td><td></td></tr>
+                        <tr><td>3</td><td></td><td></td><td class="bg-blue">서비스서버<br>구축</td><td class="bg-red">빅데이터<br>프로</td><td></td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
