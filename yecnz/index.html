@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제주대학교 포털</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- 1. 헤더 영역 -->
+    <header class="global-header">
+        <div class="header-inner">
+            <!-- 로고 -->
+            <div class="logo">
+                <a href="#">
+                    <img src="img/jejunu_logo.png" alt="제주대학교 포털" class="logo-img">
+                </a>
+            </div>
+            
+            <!-- 검색창 -->
+            <form class="search-form" action="#">
+                <input type="text" placeholder="메뉴검색" aria-label="메뉴검색">
+                <button type="submit" aria-label="검색"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+
+            <!-- 우측 유틸 메뉴 -->
+            <nav class="util-nav">
+                <ul>
+                    <li><a href="#">통합정보</a></li>
+                    <li><a href="#">JNUclass</a></li>
+                    <li><a href="#">홈페이지</a></li>
+                    <li><div class="divider"></div></li>
+                    <li><a href="#" class="btn-outlined">로그아웃</a></li>
+                    <li><a href="#" class="btn-outlined">마이페이지</a></li>
+                    <li><div class="divider"></div></li>
+                    <li><a href="#" class="icon-btn" title="설정"><i class="fa-solid fa-gear"></i></a></li>
+                    <li><a href="#" class="icon-btn" title="도움말"><i class="fa-solid fa-question-circle"></i></a></li>
+                    <li><a href="#" class="icon-btn" title="언어선택"><i class="fa-solid fa-globe"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. 네비게이션 바 (추가) -->
+    <nav class="main-nav">
+        <div class="main-nav-inner">
+            <ul>
+                <li><a href="#">학사안내</a></li>
+                <li><a href="#">수업/성적</a></li>
+                <li><a href="#">학적/졸업</a></li>
+                <li><a href="#">등록/장학</a></li>
+                <li><a href="#">경력관리</a></li>
+                <li><a href="#">교내활동</a></li>
+                <li><a href="#">게시판</a></li>
+                <li><a href="#">시설물예약</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 3. 대시보드 메인 -->
+    <main class="dashboard">
+        
+        <!-- 위젯 1: 학생 정보 -->
+        <section class="widget profile-widget">
+            <div class="widget-body">
+                <div class="profile-top">
+                    <div class="profile-top-left">
+                        <h2 class="name">송연지 <span class="dept-tag">컴퓨터공학과</span></h2>
+                    </div>
+                </div>
+                <p class="status">
+                    학부생(재학생) 접속중
+                    <a href="#" class="auth-btn"><span class="auth-dot"></span> 2차인증 하기 →</a>
+                </p>
+                <nav class="profile-links">
+                    <ul>
+                        <li><a href="#"><div class="icon-circle"><i class="fa-solid fa-building-columns"></i></div><span>통합정보</span></a></li>
+                        <li><a href="#"><div class="icon-circle"><i class="fa-solid fa-book-open"></i></div><span>중앙도서관</span></a></li>
+                        <li><a href="#"><div class="icon-circle"><i class="fa-solid fa-envelope"></i></div><span>메일</span></a></li>
+                        <li><a href="#"><div class="icon-circle"><i class="fa-solid fa-id-card-clip"></i></div><span>증명서발급</span></a></li>
+                    </ul>
+                </nav>
+                <div class="access-info">
+                    <p><i class="fa-solid fa-desktop"></i> 최근 접속 IP : 134.75.39.22</p>
+                    <p><i class="fa-regular fa-clock"></i> 최근 접속 시간 : <time datetime="2026-04-07T18:03:45">2026-04-07 18:03:45</time></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 위젯 2: 공지사항 -->
+        <section class="widget">
+            <h2 class="widget-header">공지사항</h2>
+            <div class="widget-body">
+                <nav class="notice-tabs">
+                    <ul>
+                        <li><button type="button" class="active">공지</button></li>
+                        <li><button type="button">수업</button></li>
+                        <li><button type="button">등록</button></li>
+                        <li><button type="button">장학</button></li>
+                        <li><button type="button">JNUclass</button></li>
+                    </ul>
+                </nav>
+                <ul class="text-list">
+                    <li><a href="#" class="title">· 2026 글로벌 피우다프로젝트 호남권 참가자 모집 (~5/17)</a><time class="date">04-08</time></li>
+                    <li><a href="#" class="title">· [JejuGLoCal university project]Learncation Progra...</a><time class="date">04-08</time></li>
+                    <li><a href="#" class="title">· [글로컬대학사업] 내외국인학생 생태문화 런케이션 '제주...</a><time class="date">04-08</time></li>
+                    <li><a href="#" class="title">· [산학협력단] 2026학년도 1학기 대체 국가근로장학생...</a><time class="date">04-08</time></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 위젯 3: 수강정보 -->
+        <section class="widget">
+            <h2 class="widget-header">수강정보</h2>
+            <div class="widget-body">
+                <ul class="course-list">
+                    <li><span class="title">식품재료학</span><span class="badge">블렌디드</span></li>
+                    <li><span class="title">SW융합캡스톤디자인 I</span></li>
+                    <li><span class="title">식품위생학</span></li>
+                    <li><span class="title">알고리즘</span></li>
+                    <li><span class="title">식품분석학</span></li>
+                    <li><span class="title">서비스서버구축방법론</span></li>
+                    <li><span class="title">빅데이터프로그래밍</span><span class="badge">블렌디드</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 위젯 4: 주요서비스링크 -->
+        <section class="widget">
+            <h2 class="widget-header">주요서비스링크</h2>
+            <div class="widget-body">
+                <ul class="service-grid">
+                    <li><a href="#" class="service-item"><div class="icon"><img src="img/file.png" alt="연구실안전관리시스템"></div><p>연구실안전<br>관리시스템</p></a></li>
+                    <li><a href="#" class="service-item"><div class="icon"><i class="fa-solid fa-gear"></i></div><p>공학인증</p></a></li>
+                    <li><a href="#" class="service-item"><div class="icon"><img src="img/windows.png" alt="오피스365"></div><p>오피스365</p></a></li>
+                    <li><a href="#" class="service-item"><div class="icon"><img src="img/conversation.png" alt="총학생회"></div><p>총학생회</p></a></li>
+                    <li><a href="#" class="service-item"><div class="icon"><i class="fa-solid fa-users"></i></div><p>동아리연합회</p></a></li>
+                    <li><a href="#" class="service-item"><div class="icon"><img src="img/computer.png" alt="헬프유(원격1)"></div><p>헬프유(원격1)</p></a></li>
+                    <li><a href="#" class="service-item"><div class="icon"><img src="img/computer.png" alt="넷클리닉(원격2)"></div><p>넷클리닉(원격2)</p></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 위젯 5: 비교과프로그램 -->
+        <section class="widget">
+            <h2 class="widget-header">비교과프로그램</h2>
+            <div class="widget-body">
+                <div class="banner-wrap">
+                    <span>· 2026학년도 학습컨설팅</span>
+                    <a href="#" class="btn-dark">신청하기 ></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
