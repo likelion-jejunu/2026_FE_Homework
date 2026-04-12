@@ -1,0 +1,291 @@
+css
+    body {
+      background-color: #f0f0f0;
+      font-family: "맑은 고딕", Arial, sans-serif;
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 상단 */
+    #header {
+      background-color: #1a5fa8;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    #header h1 {
+      color: white;
+      font-size: 20px;
+      margin: 0;
+      margin-right: 20px;
+    }
+
+    #header input {
+      width: 300px;
+      height: 30px;
+      padding: 0 10px;
+      border: none;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+
+    #header button {
+      height: 30px;
+      padding: 0 12px;
+      background-color: #154d8a;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      margin-left: 4px;
+      cursor: pointer;
+    }
+
+    #header-links {
+      margin-left: auto;
+      color: white;
+      font-size: 13px;
+    }
+
+    #header-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 16px;
+    }
+
+  
+    /* 메뉴 */
+    #nav {
+      background-color: white;
+      border-bottom: 2px solid #1a5fa8;
+      display: flex;
+      padding: 0 20px;
+      justify-content: center
+    }
+
+    #nav a {
+      display: block;
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #222;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    #nav a:hover {
+      color: #1a5fa8;
+      background-color: #e8f0fb;
+    }
+
+
+    /* 본문 */
+   
+    #content {
+      width: 1160px;
+      margin: 20px auto;
+      display: flex;
+      gap: 16px;
+    }
+
+    /* 왼쪽 / 가운데 / 오른쪽 */
+    #left-col   { width: 280px; display: flex; flex-direction: column; gap: 16px; }
+    #middle-col { flex: 1;      display: flex; flex-direction: column; gap: 16px; }
+    #right-col  { width: 320px; display: flex; flex-direction: column; gap: 16px; }
+
+    .box {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .box h2 {
+      font-size: 15px;
+      margin: 0 0 12px 0;
+      color: #222;
+    }
+
+    /* 프로필 */
+    #profile-box {
+      background-color: #1a5fa8;
+      border-radius: 8px;
+      padding: 16px;
+      color: white;
+    }
+
+    #profile-box h2 {
+      color: white;
+      font-size: 16px;
+      margin: 0 0 4px 0;
+    }
+
+    #profile-box p {
+      font-size: 12px;
+      margin: 0 0 12px 0;
+      opacity: 0.85;
+    }
+
+    #profile-icons {
+      display: flex;
+      justify-content: space-around;
+      margin: 12px 0;
+    }
+
+    .profile-icon-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      cursor: pointer;
+    }
+
+    .profile-icon-item span.icon {
+      width: 44px;
+      height: 44px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    #profile-box .info {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 10px;
+      font-size: 11px;
+      opacity: 0.8;
+      line-height: 1.8;
+    }
+
+    /* 공지사항 */
+    #notice-tabs {
+      display: flex;
+      gap: 0;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    #notice-tabs button {
+      padding: 7px 14px;
+      border: none;
+      background: none;
+      font-size: 13px;
+      cursor: pointer;
+      color: #888;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+    }
+
+    #notice-tabs button.active {
+      color: #1a5fa8;
+      font-weight: bold;
+      border-bottom: 2px solid #1a5fa8;
+    }
+
+    /* 공지 목록 한 줄 */
+    .notice-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 9px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .notice-item:hover {
+      color: #1a5fa8;
+    }
+
+    .notice-item .date {
+      color: #999;
+      font-size: 12px;
+      margin-left: 10px;
+      white-space: nowrap;
+    }
+
+    /* 수강 과목 목록 */
+
+    .course-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 9px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 13px;
+    }
+
+    /* 주요서비스 아이콘 그리드 */
+    #service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .service-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      font-size: 9px;
+      text-align: center;
+      cursor: pointer;
+      padding: 8px 4px;
+      border-radius: 6px;
+    }
+
+    .service-item:hover {
+      background-color: #e8f0fb;
+    }
+
+    .service-item span.icon {
+      width: 48px;
+      height: 48px;
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+
+    /* 비교과 프로그램 목록 */
+    .program-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 13px;
+    }
+
+    .program-item button {
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 6px 14px;
+      font-size: 12px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .program-item button:hover {
+      background-color: #1a5fa8;
+    }
+
+    .class-block {
+      background-color: #1a5fa8;
+      color: white;
+      border-radius: 3px;
+      font-size: 10px;
+      padding: 2px 3px;
+      line-height: 1.4;
+    }
+  

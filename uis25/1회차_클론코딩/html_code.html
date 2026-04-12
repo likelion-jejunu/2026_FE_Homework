@@ -1,0 +1,175 @@
+html
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제주대학교 포털</title>
+    <link href="css_code\style.css" rel="stylesheet">
+    <style></style>
+</head>
+<body>
+    <!-- 상단 -->
+     <div id="header">
+      <h1>제주대학교 | 포털</h1>
+      <input type = "text" placeholder="메뉴검색">
+      <button>검색</button>
+      <div id="header-links">
+        <a href="#">통합정보</a>
+        <a href="#">JNUclass</a>
+        <a href="#">홈페이지</a>
+        <a href="#" class="btn-outline">로그아웃</a>
+        <a href="#" class="btn-outline">마이페이지</a>
+     </div>
+   </div>
+
+     <!-- 메뉴 -->
+     <div id="nav">
+        <a href="#">학사안내</a>
+        <a href="#">수업/성적</a>
+        <a href="#">학적/졸업</a>
+        <a href="#">등록/장학</a>
+        <a href="#">경력관리</a>
+        <a href="#">교내활동</a>
+        <a href="#">게시판</a>
+        <a href="#">시설물예약</a>
+     </div>
+     
+     <!-- 프로필 -->
+     <div id="content">
+      <div id="left-col">
+       <div id="profile-box">
+        <h2>한라봉</h2>
+        <p>감귤포장학과 · 학부생(재학생)</p>
+        <div id="profile-icons">
+          <div class="profile-icon-item">
+            <span class="icon">🏛️</span>
+            <span>통합정보</span>
+          </div>
+          <div class="profile-icon-item">
+            <span class="icon">📖</span>
+            <span>중앙도서관</span>
+          </div>
+          <div class="profile-icon-item">
+            <span class="icon">✉️</span>
+            <span>메일</span>
+          </div>
+          <div class="profile-icon-item">
+            <span class="icon">📄</span>
+            <span>증명서발급</span>
+          </div>
+        </div>
+        <div class="info">
+          🖥️ 최근 접속 IP : 123.345.567.789<br>
+          🕐 최근 접속 시간 : 202X-XX-XX 12:34:56
+        </div>
+      </div>
+
+      <!-- 주요서비스링크 -->
+      <div class="box">
+        <h2>주요서비스링크</h2>
+        <div id="service-grid">
+          <div class="service-item">
+            <span class="icon">🔬</span>
+            <span>연구실안전<br>관리시스템</span>
+          </div>
+          <div class="service-item">
+            <span class="icon">🎓</span>
+            <span>공학인증</span>
+          </div>
+          <div class="service-item">
+            <span class="icon">💼</span>
+            <span>오피스365</span>
+          </div>
+          <div class="service-item">
+            <span class="icon">👥</span>
+            <span>총학생회</span>
+          </div>
+          <div class="service-item">
+            <span class="icon">🎭</span>
+            <span>동아리<br>연합회</span>
+          </div>
+          <div class="service-item">
+            <span class="icon">💻</span>
+            <span>헬프유<br>(원격1)</span>
+          </div>
+          <div class="service-item">
+            <span class="icon">🖥️</span>
+            <span>넷클리닉<br>(원격2)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+     <!-- 공지사항 -->
+     <div id="middle-col">
+      <div class="box">
+        <h2>공지사항</h2>
+        <div id="notice-tabs">
+          <button class="active" onclick="clickTab(this)">공지</button>
+          <button onclick="clickTab(this)">수업</button>
+          <button onclick="clickTab(this)">등록</button>
+          <button onclick="clickTab(this)">장학</button>
+          <button onclick="clickTab(this)">JNUclass</button>
+        </div>
+        <div class="notice-item">
+          <span>2026년 상반기 수강생 모집</span>
+          <span class="date">xx-xx</span>
+        </div>
+        <div class="notice-item">
+          <span>2026학년도 제1학기 국가근로장학생 모집</span>
+          <span class="date">xx-xx</span>
+        </div>
+        <div class="notice-item">
+          <span>2026 프로젝트 참가자 모집 안내</span>
+          <span class="date">xx.xx</span>
+        </div>
+        <div class="notice-item">
+          <span>2026년 지원 안내</span>
+          <span class="date">xx.xx</span>
+        </div>
+      </div>
+
+      <!-- 비교과프로그램 -->
+      <div class="box">
+        <h2>비교과프로그램</h2>
+        <div class="program-item">
+          <span>2026학년도 학습컨설팅</span>
+          <button>신청하기 ›</button>
+        </div>
+        <div class="program-item">
+          <span>2026학년 1학기 국가근로장학 참여학생 모집</span>
+          <button>신청하기 ›</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 수강정보 -->
+    <div id="right-col">
+      <div class="box">
+        <h2>수강정보</h2>
+        <div class="course-item">
+          <span>감귤학개론</span>
+        </div>
+        <div class="course-item">
+          <span>포장재료학</span>
+        </div>
+        <div class="course-item">
+          <span>기초화학</span>
+        </div>
+        <div class="course-item">
+          <span>저장및유통기술</span>
+        </div>
+        <div class="course-item">
+          <span>감귤유전학</span>
+        </div>
+        <div class="course-item">
+          <span>감귤재배및실습</span>
+        </div>
+        <div class="course-item">
+          <span>감귤가공학</span>
+        </div>
+</body>
+</html>
