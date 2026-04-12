@@ -1,0 +1,198 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; background-color: #f2f4f7; color: #333; line-height: 1.5; }
+        ul, li { list-style: none; }
+        a { text-decoration: none; color: inherit; }
+        button { background: none; border: none; font: inherit; cursor: pointer; }
+
+        /* 2. 헤더 (Header) 영역 */
+        .global-header {
+            background-color: #1472a8; /* 메인 파란색 */
+            color: #ffffff;
+            height: 60px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        /* 2-1. 로고 */
+        .logo a { display: flex; align-items: center; font-size: 20px; letter-spacing: -0.5px; }
+        .logo-img { height: 50px; margin-right: 10px; }
+
+        /* 2-2. 검색창 */
+        .search-form { display: flex; background-color: #ffffff; width: 400px; height: 38px; overflow: hidden; }
+        .search-form input { flex: 1; border: none; padding: 0 20px; outline: none; font-size: 14px; }
+        .search-form button { width: 45px; background-color: #1472a8; color: white; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; }
+        
+        /* 2-3. 우측 상단 유틸 메뉴 */
+        .util-nav ul { display: flex; align-items: center; gap: 20px; font-size: 16px; font-weight: 500; }
+        .util-nav li { display: flex; align-items: center; }
+        .util-nav .divider { width: 1px; height: 12px; background-color: rgba(255, 255, 255, 0.3); margin: 0 5px; }
+        .util-nav a { opacity: 0.9; transition: opacity 0.2s; }
+        .util-nav a:hover { opacity: 1; text-decoration: underline; }
+
+        /* 3. 네비게이션 바 (추가) */
+        .main-nav {
+            background-color: #ffffff;
+            border-bottom: 1px solid #d9dee3;
+            height: 60px;
+        }
+        .main-nav-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding:  20px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .main-nav ul {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+        .main-nav li { flex: 1; text-align: center; }
+        .main-nav a {
+            display: block;
+            font-size: 17px;
+            font-weight: 600;
+            color: #333;
+            padding: 13px 0;
+            transition: color 0.2s, background-color 0.2s;
+            position: relative;
+        }
+        .main-nav a:hover {
+            color: #316FAA;
+            background-color: #f5f7fa;
+        }
+        /* 3. 대시보드 레이아웃 (Grid) */
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1400px;
+            margin: 10px auto 60px;
+            padding: 0 17px;
+        }
+
+        /* 대시보드 상단 하늘색 배경 */
+        .dashboard {
+            position: relative;
+        }
+        .dashboard::before {
+            content: '';
+            position: absolute;
+            top: -25px;
+            left: -9999px;
+            right: -9999px;
+            height: calc(50% + 50px); /* 상단 위젯 행 높이만큼 */
+            background-color: #d2dfed;
+            z-index: -1;
+        }
+
+        /* 4. 공통 카드 위젯 */
+        .widget {
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border: 1px solid #dddcdc;
+            display: flex;
+            flex-direction: column;
+        }
+        .widget-header {
+            padding: 3px 15px;
+            margin-top: 10px;
+            font-weight: 900px;
+            font-size: 18px;
+            color: #333;
+        }
+        .widget-body { padding: 17px; flex: 1; }
+
+        /* 5. 개별 위젯 스타일 */
+        
+        /* 5-1. 학생 프로필 (파란색) */
+        .profile-widget { background-color: #1472a8; color: #fff; border: none; }
+        .profile-widget .name { font-size: 18px; font-weight: bold; margin-bottom: 8px; display: flex; align-items: flex-end; gap: 10px;}
+        .profile-widget .dept-tag { font-size: 13px; font-weight :bold; background-color: #1a2744; padding: 2px 8px; }
+        .profile-widget .name span { font-size: 13px; font-weight: normal; opacity: 0.8; }
+        .profile-widget .status { font-size: 14px; font-weight:800px; display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 25px; color: #b8cfe6; }
+        .profile-widget .auth-btn { background: #fff; color: #1472a8; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; }
+
+        .profile-links ul { display: flex; justify-content: center; gap: 45px; text-align: center; border-bottom: 1px dashed rgba(255,255,255,0.2); padding-bottom: 20px; margin-bottom: 20px; }
+        .profile-links .icon-circle img { width: 28px; height: 28px; object-fit: contain; }
+        .service-item .icon img { width: 28px; height: 28px; object-fit: contain; }
+        .profile-links .icon-circle { 
+            width: 52px; height: 52px; 
+            background-color: #5a9fd8;
+            border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center; 
+            margin: 0 auto px; font-size: 20px; 
+            transition: background 0.2s;
+        }
+        .profile-links a:hover .icon-circle { background-color: rgba(255, 255, 255, 0.25); }
+        .profile-links span { font-size: 13px; color: #fff; }
+
+        .access-info p { font-size: 15px; font-weight: 350; line-height: 1.8; display: flex; align-items: center; gap: 8px; }
+        .access-info i { font-size: 14px; vertical-align: middle; }
+
+        /* 5-2. 공지사항 (탭 및 리스트) */
+        .notice-tabs ul { 
+            display: flex; gap: 12px; margin-bottom: 7px; 
+            border-bottom: 1px solid #e9ecef;
+            }
+        .notice-tabs button { 
+            padding-bottom: 10px; font-size: 17px; font-weight: 700; color: #888;
+            border-bottom: 2px solid transparent;
+            position: relative;
+        }
+        .notice-tabs button.active { 
+            color: #0b6fb8; 
+            border-bottom: 2px solid #0b6fb8; /* 활성 탭 파란색 선 */
+        }
+
+        .text-list li { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; font-size: 14px; }
+        .text-list li + li { border-top: 1px dashed #f1f3f5; }
+        .text-list .title { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 80%; color: #444; }
+        .text-list .title:hover { text-decoration: underline; color: #000; }
+        .text-list .date { color: #888; font-size: 13px; }
+
+        /* 5-4. 수강정보 */
+        .course-list li {
+            display: flex; justify-content: space-between; align-items: center;
+            background-color: #f0f0f1;
+            border-radius: 6px;
+            padding: 5px 5px 5px 10px;
+            margin-bottom: 3px;
+            font-size: 15px;
+            color: #333;
+        }
+        .badge { background-color: #6f42c1; width: 85px; text-align: center; color: #fff; padding: 3px 3px; border-radius: 4px; font-size: 13px; font-weight: 500;}
+
+        /* 5-4. 주요서비스 링크 */
+        .service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; text-align: center; }
+        .service-item .icon { width: 56px; height: 56px; background-color: #f4f6f8; border-radius: 50%; margin: 0 auto 8px; display: flex; align-items: center; justify-content: center; font-size: 20px;}
+        .service-item:hover .icon { background-color: #e9ecef; }
+        .service-item p { font-size: 13px; color: #555; line-height: 1.3; }
+        .service-item:hover p { text-decoration: underline; }
+
+        /* 5-5. 비교과프로그램 (배너형) */
+        .banner-wrap { background: #f8f9fa; padding: 10px 10px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }
+        .banner-wrap span { font-size: 14px; color: #444; }
+        .btn-dark { background: #6c757d; color: #fff; padding: 6px 12px; border-radius: 4px; font-size: 13px; }
+
+        /* 반응형 (태블릿/모바일) */
+        @media (max-width: 992px) {
+            .dashboard { grid-template-columns: repeat(2, 1fr); }
+            .header-inner { flex-direction: column; padding: 15px; gap: 10px;}
+            .search-form { width: 100%; }
+        }
+        @media (max-width: 768px) {
+            .dashboard { grid-template-columns: 1fr; margin-top: 15px;}
+            .util-nav { display: none; } /* 모바일에서는 유틸 메뉴 숨김 처리 (햄버거 메뉴 대체용) */
+        }
