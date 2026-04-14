@@ -1,0 +1,43 @@
+/* 초기화 [cite: 111] */
+body { margin: 0; background-color: #f2f4f7; font-family: sans-serif; }
+
+/* 헤더 [cite: 121, 131] */
+.global-header { background-color: #005a96; color: white; height: 60px; }
+.header-inner { 
+  display: flex; align-items: center; max-width: 1200px; margin: 0 auto; height: 100%; padding: 0 20px; 
+}
+.logo-area { display: flex; align-items: center; gap: 10px; }
+.logo-area img { height: 35px; }
+.search-area { flex: 1; display: flex; justify-content: center; }
+.search-area input { width: 300px; padding: 6px; border-radius: 4px; border: none; }
+.logout-btn { background: #1a4a82; color: white; border: 1px solid #fff; padding: 4px 10px; margin-left: 15px; }
+
+/* 네비게이션 [cite: 127] */
+.main-nav { background: white; border-bottom: 2px solid #005a96; }
+.main-nav ul { 
+  display: flex; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 15px 20px; 
+  list-style: none; font-weight: bold; font-size: 15px;
+}
+
+/* 본문 레이아웃 [cite: 118, 138] */
+.portal-content { display: flex; max-width: 1200px; margin: 20px auto; gap: 20px; padding: 0 20px; }
+.column { display: flex; flex-direction: column; gap: 20px; }
+.left { flex: 1.2; }
+.middle { flex: 1.5; }
+.right { flex: 1; }
+
+/* 박스 디자인 [cite: 84, 88, 96] */
+.white-box { background: white; border: 1px solid #ddd; border-radius: 4px; padding: 20px; }
+.profile-card { background: #3b64a4; color: white; border-radius: 4px; padding: 25px; }
+.user-tag { background: rgba(255,255,255,0.2); display: inline-block; padding: 2px 8px; font-size: 12px; border-radius: 15px; }
+.quick-icons { display: flex; justify-content: space-around; text-align: center; margin: 20px 0; font-size: 12px; }
+.service-grid { display: grid; grid-template-columns: repeat(4, 1fr); font-size: 24px; text-align: center; }
+
+/* 공지사항 & 수강정보 [cite: 207] */
+.tab-menu { border-bottom: 2px solid #eee; margin-bottom: 15px; }
+.tab-menu span { padding: 5px 15px; display: inline-block; cursor: pointer; color: #888; }
+.tab-menu span.active { color: #005a96; border-bottom: 2px solid #005a96; font-weight: bold; }
+.list li, .course-list li { 
+  padding: 10px 0; border-bottom: 1px solid #f9f9f9; font-size: 14px; display: flex; justify-content: space-between; 
+}
+.badge { background: #6f42c1; color: white; padding: 2px 6px; border-radius: 4px; font-size: 11px; }
