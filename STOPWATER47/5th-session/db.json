@@ -1,0 +1,41 @@
+{
+  "todayTodos": [
+    {
+      "id": "1",
+      "title": "컴퓨터공학과 과제 확인하기",
+      "completed": false
+    },
+    {
+      "id": "2",
+      "title": "정지수",
+      "completed": false
+    },
+    {
+      "title": "멋사 과제하기",
+      "completed": false,
+      "id": "VB5w35Efg-0"
+    }
+  ],
+  "workTodos": [
+    {
+      "id": "1",
+      "title": "API 실습 정리하기",
+      "completed": false
+    }
+  ],
+  "personalTodos": [
+    {
+      "id": "1",
+      "title": "운동 30분 하기",
+      "completed": true
+    }
+  ],
+  "shoppingTodos": [
+    {
+      "title": "다이소 포도앰플",
+      "completed": true,
+      "id": "hkackM3i42s"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
