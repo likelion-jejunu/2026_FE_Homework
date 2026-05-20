@@ -1,0 +1,404 @@
+.app {
+  min-height: 100svh;
+  padding: 14px 20px 24px;
+  background: linear-gradient(140deg, #eef4ff 0%, #fbf3ff 100%);
+  box-sizing: border-box;
+}
+
+.planner {
+  width: min(500px, 100%);
+  margin: 0 auto;
+}
+
+.page-title {
+  margin: 0 0 10px;
+  color: #10213d;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.top-bar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.date-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.calendar-icon {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.date-block h1 {
+  margin: 0 0 2px;
+  color: #10213d;
+  font-size: 27px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.date-block p {
+  margin: 0;
+  color: #6c7890;
+  font-size: 16px;
+}
+
+.weather-pill {
+  display: inline-flex;
+  min-width: 86px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 12px;
+  border: 1px solid #e4e8f1;
+  border-radius: 16px;
+  color: #10213d;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 2px 8px rgba(42, 49, 69, 0.13);
+  box-sizing: border-box;
+}
+
+.weather-pill span {
+  color: #2f7cff;
+  font-size: 19px;
+}
+
+.weather-pill strong {
+  font-size: 15px;
+}
+
+.todo-card {
+  border: 1px solid rgba(212, 218, 230, 0.8);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 2px 8px rgba(42, 49, 69, 0.12);
+}
+
+.todo-card {
+  overflow: hidden;
+}
+
+.composer {
+  padding: 18px 20px 14px;
+}
+
+.composer-row {
+  display: grid;
+  grid-template-columns: 1fr 58px;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.composer input {
+  min-width: 0;
+  height: 48px;
+  padding: 0 16px;
+  border: 1px solid #dce2ec;
+  border-radius: 15px;
+  color: #24324a;
+  background: #ffffff;
+  font: inherit;
+  font-size: 16px;
+  letter-spacing: 0;
+  box-sizing: border-box;
+}
+
+.composer input::placeholder {
+  color: #9aa5b8;
+}
+
+.composer input:focus {
+  border-color: #7aa8ff;
+  outline: 4px solid rgba(47, 124, 255, 0.12);
+}
+
+.add-button {
+  width: 58px;
+  height: 48px;
+  border: 0;
+  border-radius: 15px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2b82ff, #2f6ff0);
+  box-shadow: 0 7px 13px rgba(47, 124, 255, 0.24);
+  font-size: 29px;
+  font-weight: 300;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.category {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  gap: 6px;
+  padding: 0 11px;
+  border: 0;
+  border-radius: 11px;
+  color: #32425d;
+  background: #f1f3f6;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.category.is-active {
+  color: #ffffff;
+  background: linear-gradient(135deg, #2f7cff, #2d6ff0);
+  box-shadow: 0 6px 12px rgba(47, 124, 255, 0.2);
+}
+
+.category span {
+  font-size: 13px;
+}
+
+.divider {
+  height: 1px;
+  background: #edf0f5;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 18px 20px 14px;
+  padding: 5px;
+  border-radius: 15px;
+  background: #f6f7f9;
+}
+
+.tab {
+  min-height: 40px;
+  border: 0;
+  border-radius: 13px;
+  color: #6d7890;
+  background: transparent;
+  font: inherit;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.tab.is-active {
+  color: #10213d;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(42, 49, 69, 0.13);
+}
+
+.group-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 20px 20px;
+}
+
+.list-group {
+  padding: 14px 14px 12px;
+  border-radius: 16px;
+  background: #f7f8fa;
+}
+
+.group-list .list-group + .list-group {
+  border-top: 1px solid #e6ebf3;
+}
+
+.group-title {
+  display: grid;
+  grid-template-columns: 22px auto 1fr auto;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #24324a;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.group-title small {
+  color: #8a96aa;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.section-icon,
+.chevron {
+  color: #9aa5b8;
+}
+
+.section-icon {
+  font-size: 15px;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.todo-item {
+  display: grid;
+  grid-template-columns: 30px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  min-height: 46px;
+  padding: 8px 12px;
+  border-radius: 14px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.check-button {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #00c8b8;
+  border-radius: 999px;
+  color: #ffffff;
+  background: #ffffff;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.todo-item.is-complete {
+  background: transparent;
+  min-height: 36px;
+  padding-left: 0;
+}
+
+.todo-item.is-complete .check-button {
+  border-color: #15c8bc;
+  background: #15c8bc;
+}
+
+.todo-title {
+  min-width: 0;
+  border: 0;
+  padding: 0;
+  color: #24324a;
+  background: transparent;
+  font: inherit;
+  font-size: 15px;
+  text-align: left;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+.todo-item.is-complete .todo-title {
+  color: #9aa5b8;
+  text-decoration: line-through;
+}
+
+.delete-button {
+  min-height: 28px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 10px;
+  color: #9aa5b8;
+  background: transparent;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.todo-item:hover .delete-button,
+.todo-item:focus-within .delete-button {
+  opacity: 1;
+}
+
+.empty-message,
+.error-message {
+  margin: 0 20px 20px;
+  padding: 18px;
+  border-radius: 15px;
+  color: #8a96aa;
+  background: #f7f8fa;
+  text-align: center;
+}
+
+.error-message {
+  color: #b42318;
+  background: #fff1f0;
+}
+
+@media (max-width: 560px) {
+  .app {
+    padding: 14px 12px 24px;
+  }
+
+  .top-bar {
+    align-items: center;
+  }
+
+  .date-block h1 {
+    font-size: 24px;
+  }
+
+  .date-block p {
+    font-size: 14px;
+  }
+
+  .weather-pill {
+    min-width: 80px;
+    height: 38px;
+  }
+
+  .composer {
+    padding: 16px 16px 12px;
+  }
+
+  .composer-row {
+    grid-template-columns: 1fr 52px;
+  }
+
+  .composer input,
+  .add-button {
+    height: 46px;
+  }
+
+  .add-button {
+    width: 52px;
+  }
+
+  .tabs,
+  .group-list,
+  .empty-message,
+  .error-message {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .todo-item {
+    grid-template-columns: 30px 1fr;
+  }
+
+  .delete-button {
+    grid-column: 2;
+    justify-self: start;
+    opacity: 1;
+  }
+}
