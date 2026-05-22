@@ -1,0 +1,25 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "title": "사과 심기",
+      "completed": false
+    },
+    {
+      "id": "2",
+      "title": "진드시 박멸하기",
+      "completed": true
+    },
+    {
+      "title": "사과 파이 만들기",
+      "completed": false,
+      "id": "xv2BgqCd4AQ"
+    },
+    {
+      "title": "나비보베따우 섬으로 가서 훌라 댄스 배우기",
+      "completed": true,
+      "id": "mVj5wocSoa8"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
