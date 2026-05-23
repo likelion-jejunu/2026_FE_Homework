@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eaf3de;
+  font-family: 'Nunito', sans-serif;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* ── 전체 컨테이너 ── */
+.container {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ── 헤더 ── */
+.header {
+  text-align: center;
+  padding: 1.5rem 1rem 1rem;
+  background: #f7fdf0;
+  border: 2px solid #c0dd97;
+  border-radius: 24px;
+}
+
+.header-deco {
+  font-size: 22px;
+  margin-bottom: 6px;
+  letter-spacing: 4px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 800;
+  color: #3b6d11;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #639922;
+  font-weight: 600;
+}
+
+/* ── 입력창 ── */
+.input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.todo-input {
+  flex: 1;
+  border: 2px solid #c0dd97;
+  border-radius: 20px;
+  padding: 10px 16px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  background: #f7fdf0;
+  color: #27500a;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.todo-input:focus {
+  border-color: #639922;
+}
+
+.todo-input::placeholder {
+  color: #9fc45a;
+}
+
+.add-btn {
+  background: #639922;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.add-btn:hover {
+  background: #3b6d11;
+}
+
+/* ── 탭 ── */
+.tabs {
+  display: flex;
+  background: #f7fdf0;
+  border: 2px solid #c0dd97;
+  border-radius: 16px;
+  padding: 4px;
+  gap: 4px;
+}
+
+.tab {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 12px;
+  background: transparent;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #9fc45a;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.tab.active {
+  background: #639922;
+  color: #fff;
+}
+
+.tab-count {
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 10px;
+  padding: 1px 7px;
+  font-size: 12px;
+}
+
+.tab.active .tab-count {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ── 할일 목록 ── */
+.todo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 120px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #f7fdf0;
+  border: 1.5px solid #c0dd97;
+  border-radius: 16px;
+  transition: border-color 0.2s;
+}
+
+.todo-item:hover {
+  border-color: #639922;
+}
+
+.check-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #c0dd97;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 14px;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.check-btn:hover {
+  border-color: #639922;
+  background: #eaf3de;
+}
+
+.check-btn.done {
+  background: #639922;
+  border-color: #639922;
+}
+
+.todo-title {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 600;
+  color: #27500a;
+}
+
+.todo-title.done {
+  text-decoration: line-through;
+  color: #9fc45a;
+}
+
+.del-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #b4b2a9;
+  font-size: 20px;
+  padding: 2px 6px;
+  border-radius: 8px;
+  line-height: 1;
+  transition: all 0.2s;
+}
+
+.del-btn:hover {
+  color: #993c1d;
+  background: #faece7;
+}
+
+.empty {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: #9fc45a;
+  font-size: 14px;
+  font-weight: 600;
+  background: #f7fdf0;
+  border: 1.5px dashed #c0dd97;
+  border-radius: 16px;
+}
+
+/* ── 오늘의 작물 카드 ── */
+.fruit-card {
+  background: #fff8e7;
+  border: 2px solid #fac775;
+  border-radius: 20px;
+  padding: 1rem 1.25rem;
+}
+
+.fruit-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.fruit-icon {
+  font-size: 20px;
+}
+
+.fruit-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #854f0b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.refresh-btn {
+  margin-left: auto;
+  background: #ef9f27;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 4px 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.refresh-btn:hover {
+  background: #ba7517;
+}
+
+.fruit-name {
+  font-size: 20px;
+  font-weight: 800;
+  color: #633806;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.fruit-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.stat {
+  background: #faeeda;
+  border-radius: 12px;
+  padding: 8px;
+  text-align: center;
+}
+
+.stat-val {
+  font-size: 18px;
+  font-weight: 800;
+  color: #854f0b;
+}
+
+.stat-lbl {
+  font-size: 11px;
+  color: #ba7517;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.fruit-loading {
+  font-size: 14px;
+  color: #ba7517;
+  font-weight: 600;
+}
+
+.fruit-error {
+  font-size: 13px;
+  color: #993c1d;
+  font-weight: 600;
+}
