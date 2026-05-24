@@ -1,0 +1,15 @@
+{
+  "todos": [
+    {
+      "title": "잠자기",
+      "completed": true,
+      "id": "imtR2aU8CMY"
+    },
+    {
+      "title": "과제하기",
+      "completed": false,
+      "id": "mbFcS1O73sk"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
