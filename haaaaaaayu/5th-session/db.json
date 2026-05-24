@@ -1,0 +1,20 @@
+{
+  "todos": [
+    {
+      "id": "2",
+      "title": "API 실습하기",
+      "completed": false
+    },
+    {
+      "title": "아주 맛있는 밥 먹기",
+      "completed": false,
+      "id": "eZ7GVOepWGg"
+    },
+    {
+      "title": "적점에서 생맥주와 맵지쌀국수를 아주그냥 다발로 때리기",
+      "completed": true,
+      "id": "80TGLtqcqWk"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
