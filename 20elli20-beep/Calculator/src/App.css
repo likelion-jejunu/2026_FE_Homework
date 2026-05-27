@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Nanum+Gothic:wght@400;700&display=swap');
+
+/* ── 배경 ── */
+.page-bg {
+  min-height: 100vh;
+  background-color: #f5efe0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 27px,
+      #d4c4a0 27px,
+      #d4c4a0 28px
+    );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+/* ── 카드 ── */
+.calc-wrapper {
+  width: 100%;
+  max-width: 380px;
+  background: #fdf6e3;
+  border: 3px solid #5a3e1b;
+  box-shadow: 6px 6px 0 #5a3e1b;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* ── 헤더 ── */
+.calc-header {
+  background: #c0392b;
+  padding: 20px 24px 16px;
+  text-align: center;
+  border-bottom: 3px solid #5a3e1b;
+  position: relative;
+}
+
+.calc-mascot {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 13px;
+  color: #ffeaa7;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+}
+.mascot-heart { margin: 0 4px; }
+
+.calc-title {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 6px;
+  text-shadow: 2px 2px 0 #8b1a0a;
+}
+
+.calc-subtitle {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 12px;
+  color: #ffeaa7;
+  margin-top: 4px;
+  letter-spacing: 3px;
+}
+
+/* ── 본문 ── */
+.calc-body {
+  padding: 24px 20px;
+}
+
+.section-label {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 12px;
+  color: #7a5a2a;
+  margin-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ── 연산자 버튼 ── */
+.operator-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.op-btn {
+  background: #fdf6e3;
+  border: 2px solid #5a3e1b;
+  border-radius: 3px;
+  padding: 8px 4px;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #3d2b0e;
+  cursor: pointer;
+  transition: all 0.1s;
+  box-shadow: 2px 2px 0 #5a3e1b;
+}
+
+.op-btn:hover {
+  background: #ede0c0;
+}
+
+.op-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+.op-active {
+  background: #c0392b !important;
+  color: #fff !important;
+  border-color: #8b1a0a !important;
+  box-shadow: 2px 2px 0 #8b1a0a !important;
+}
+
+/* ── 입력 영역 ── */
+.inputs-area {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  flex: 1;
+  min-width: 90px;
+}
+
+.input-label {
+  display: block;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 11px;
+  color: #7a5a2a;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.calc-input {
+  width: 100%;
+  border: 2px solid #5a3e1b;
+  border-radius: 3px;
+  padding: 8px 10px;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 18px;
+  color: #3d2b0e;
+  background: #fffef5;
+  box-sizing: border-box;
+  outline: none;
+  box-shadow: inset 2px 2px 0 #d4c4a0;
+}
+
+.calc-input::placeholder {
+  color: #b8a080;
+  font-size: 13px;
+}
+
+.calc-input:focus {
+  border-color: #c0392b;
+  background: #fff;
+}
+
+.operator-display {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #c0392b;
+  padding-bottom: 8px;
+  flex-shrink: 0;
+}
+
+/* ── 계산 버튼 ── */
+.calc-btn {
+  width: 100%;
+  background: #2c5f2e;
+  color: #fdf6e3;
+  border: 2px solid #1a3a1b;
+  border-radius: 3px;
+  padding: 12px;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 3px;
+  box-shadow: 3px 3px 0 #1a3a1b;
+  transition: all 0.1s;
+  margin-bottom: 16px;
+}
+
+.calc-btn:hover { background: #3a7a3d; }
+
+.calc-btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: none;
+}
+
+/* ── 에러 ── */
+.error-box {
+  background: #ffeaa7;
+  border: 2px solid #c0392b;
+  border-radius: 3px;
+  padding: 10px 12px;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 13px;
+  color: #c0392b;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* ── 결과 ── */
+.result-box {
+  background: #fff;
+  border: 3px double #5a3e1b;
+  border-radius: 3px;
+  padding: 14px 16px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.result-label {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 11px;
+  color: #7a5a2a;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.result-value {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: #c0392b;
+}
+
+/* ── 히스토리 ── */
+.history-box {
+  border: 2px solid #5a3e1b;
+  border-radius: 3px;
+  padding: 12px 14px;
+  background: #fffef5;
+}
+
+.history-title {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 12px;
+  color: #7a5a2a;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+  border-bottom: 1px dashed #c4a87a;
+  padding-bottom: 6px;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 140px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 14px;
+  color: #3d2b0e;
+  padding: 3px 0;
+  border-bottom: 1px dotted #d4c4a0;
+}
+
+.history-expr { color: #7a5a2a; }
+.history-eq { font-weight: 700; color: #c0392b; }
+
+/* ── 푸터 ── */
+.calc-footer {
+  background: #5a3e1b;
+  text-align: center;
+  padding: 10px;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 12px;
+  color: #ffeaa7;
+  letter-spacing: 3px;
+}
