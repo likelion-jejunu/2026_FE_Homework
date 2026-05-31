@@ -1,0 +1,45 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%);
+}
+
+/* 유리 뒤에서 빛나는 색 덩어리 — 이게 있어야 유리 느낌이 남 */
+.app::before,
+.app::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.7;
+  z-index: 0;
+}
+
+.app::before {
+  width: 380px;
+  height: 380px;
+  background: #cdf8a6;  
+  top: 12%;
+  left: 18%;
+}
+
+.app::after {
+  width: 340px;
+  height: 340px;
+  background: #b5c7f9;   
+  bottom: 12%;
+  right: 18%;
+}
+
+.app-title {
+  position: relative;
+  z-index: 1;
+  color: rgb(23, 22, 22);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
