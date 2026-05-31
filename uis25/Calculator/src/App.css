@@ -1,0 +1,57 @@
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:root {
+  --beige-50:  #fdf8f2;
+  --beige-100: #f5ead8;
+  --beige-200: #ecdcbf;
+  --beige-300: #dfc9a5;
+  --beige-400: #c9aa80;
+  --beige-500: #b08d5e;
+  --cream:     #faf5ec;
+  --warm-gray: #7a6e62;
+  --brown:     #5c4a34;
+  --error:     #c0614a;
+  --shadow-soft: 0 4px 24px rgba(160, 130, 90, 0.13);
+}
+ 
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ 
+body {
+  background-color: var(--beige-100);
+  background-image:
+    radial-gradient(ellipse at 20% 20%, #f0e2c8 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 80%, #ecdcc5 0%, transparent 55%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Nunito', sans-serif;
+  color: var(--brown);
+}
+ 
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 360px;
+  padding: 16px;
+}
+ 
+.app-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--brown);
+  letter-spacing: -0.3px;
+  margin-bottom: 4px;
+}
