@@ -1,0 +1,154 @@
+/* Calculator.css */
+
+.calculator {
+  background: var(--cream);
+  border: 1.5px solid var(--beige-200);
+  border-radius: 24px;
+  padding: 28px 24px 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow:
+    var(--shadow-soft),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* ── 연산자 버튼 그룹 ── */
+
+.operator-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.operator-btn {
+  font-family: 'DM Mono', monospace;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 0;
+  border-radius: 14px;
+  border: 1.5px solid var(--beige-200);
+  background: var(--beige-50);
+  color: var(--warm-gray);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.1s, box-shadow 0.15s;
+  box-shadow: 0 2px 0 var(--beige-300);
+}
+
+.operator-btn:hover {
+  background: var(--beige-100);
+  border-color: var(--beige-300);
+  color: var(--brown);
+}
+
+.operator-btn:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.operator-btn.active {
+  background: var(--beige-400);
+  border-color: var(--beige-500);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 2px 0 var(--beige-500);
+}
+
+/* ── 입력 필드 ── */
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.calc-input {
+  font-family: 'DM Mono', monospace;
+  font-size: 16px;
+  color: var(--brown);
+  background: var(--beige-50);
+  border: 1.5px solid var(--beige-200);
+  border-radius: 14px;
+  padding: 13px 16px;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  width: 100%;
+}
+
+.calc-input::placeholder {
+  color: var(--beige-300);
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+}
+
+.calc-input:focus {
+  border-color: var(--beige-400);
+  box-shadow: 0 0 0 3px rgba(201, 170, 128, 0.18);
+}
+
+/* ── 계산하기 버튼 ── */
+
+.calc-btn {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+  background: var(--beige-400);
+  border: none;
+  border-radius: 16px;
+  padding: 14px 0;
+  cursor: pointer;
+  width: 100%;
+  letter-spacing: 0.2px;
+  box-shadow: 0 3px 0 var(--beige-500);
+  transition: background 0.15s, transform 0.1s, box-shadow 0.1s;
+}
+
+.calc-btn:hover {
+  background: var(--beige-500);
+}
+
+.calc-btn:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+/* ── 에러 ── */
+
+.calc-error {
+  font-size: 13px;
+  color: var(--error);
+  background: #fdf0ed;
+  border: 1px solid #f0c4ba;
+  border-radius: 10px;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+/* ── 결과 박스 ── */
+
+.result-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--beige-100);
+  border: 1.5px solid var(--beige-200);
+  border-radius: 16px;
+  padding: 14px 18px;
+}
+
+.result-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--beige-400);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.result-value {
+  font-family: 'DM Mono', monospace;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--brown);
+}
