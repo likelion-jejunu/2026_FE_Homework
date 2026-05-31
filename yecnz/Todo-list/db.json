@@ -19,6 +19,11 @@
       "title": "멋사 과제",
       "completed": false,
       "id": "jWUeL5kH0PM"
+    },
+    {
+      "title": "점심 먹기",
+      "completed": true,
+      "id": "Jfm6U21JmYE"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
