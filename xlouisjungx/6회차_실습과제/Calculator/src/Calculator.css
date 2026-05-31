@@ -1,0 +1,129 @@
+.calc-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 320px;
+  background-color: #2d2d2d; /* 공학용 계산기 플라스틱 본체 색상 */
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow:
+    0px 20px 40px rgba(0, 0, 0, 0.4),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.1);
+  border: 1px solid #222;
+}
+
+.calc-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #3d3d3d;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.calc-input:disabled {
+  background-color: #252525;
+  color: #555;
+  border: 1px solid #2d2d2d;
+  cursor: not-allowed;
+}
+
+.calc-button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.calc-btn-base {
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0px 3px 0px #151515; /* 물리 버튼 입체감 구사 */
+  transition:
+    transform 0.1s ease,
+    filter 0.2s ease;
+}
+
+.calc-btn-base:active {
+  transform: translateY(2px);
+  box-shadow: 0px 1px 0px #151515;
+}
+
+.calc-btn-normal {
+  background-color: #3d3d3d;
+  color: #fff;
+}
+
+.calc-btn-special {
+  background-color: #555;
+  color: #00e676; /* 유색 각인 느낌의 쨍한 초록색 */
+}
+
+.calc-btn-base.active {
+  background-color: #00e676;
+  color: #121212;
+  box-shadow: 0px 3px 0px #00b351;
+}
+
+.calc-btn-submit {
+  grid-column: span 4;
+  padding: 14px 0;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #ff9100; /* 정통 공학 계산기의 오렌지 버튼 */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 4px;
+  box-shadow: 0px 4px 0px #c77000;
+}
+
+.calc-btn-submit:active {
+  transform: translateY(3px);
+  box-shadow: 0px 1px 0px #c77000;
+}
+
+.calc-error-text {
+  color: #ff5252;
+  font-size: 13px;
+  margin: 4px 0 0 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+.calc-screen {
+  margin-top: 4px;
+  padding: 14px;
+  background-color: #a4b3a2;
+  border-radius: 8px;
+  border: 2px solid #1a221a;
+  box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.3);
+  color: #1a221a;
+  text-align: right;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.calc-screen-label {
+  margin: 0;
+  font-size: 11px;
+  opacity: 0.7;
+  letter-spacing: 1px;
+}
+
+.calc-screen-result {
+  margin: 4px 0 0 0;
+  font-weight: bold;
+  font-size: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
